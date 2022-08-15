@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import { StockData } from './assets/StockData.js';
 
 const app = express();
 // env configuration
@@ -9,6 +10,10 @@ const { PORT } = process.env
 
 app.get("/", (req, res) => {
     res.send("Hello from STOCK-PARSER-SERVER")
+})
+
+app.get("/data", (req, res) => {
+    res.send(StockData)
 })
 
 app.listen(PORT, () => {
