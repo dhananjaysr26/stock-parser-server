@@ -9,11 +9,11 @@ const { PORT } = process.env
 
 
 app.get("/", (req, res) => {
-    res.send("Hello from STOCK-PARSER-SERVER")
+    res.status(200).send("Hello from STOCK-PARSER-SERVER")
 })
 
 app.get("/data", (req, res) => {
-    res.send(StockData)
+    res.status(200).send(StockData)
 })
 
 app.listen(PORT, () => {
